@@ -2,13 +2,13 @@ import { Typography } from '@mui/material';
 import { StyledCarouselDiv } from 'components/CarouselItem/CarouselItem.styled';
 import { StyledTitle } from './CurrPeriodSwitch.styled';
 import { format } from 'date-fns';
-import { useAuth } from 'hooks';
-import { useEffect, useState } from 'react';
+// import { useAuth } from 'hooks';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  getExpenseSummary,
-  getIncomeSummary,
-} from 'redux/transactions/trans-operations';
+// import {
+//   getExpenseSummary,
+//   getIncomeSummary,
+// } from 'redux/transactions/trans-operations';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { ArrowNext, ArrowPrev } from 'images/images';
