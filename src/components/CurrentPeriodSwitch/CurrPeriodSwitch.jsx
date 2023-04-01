@@ -17,17 +17,17 @@ import { getPeriodData } from 'redux/transactions/trans-operations';
 export const CurrPeriodSwitch = ({ setChartToDefault = () => null }) => {
   const [idx, setIdx] = useState(0);
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  // const { isRefreshing } = useAuth();
   const expensesMonths = useSelector(state => state.transactions.transExpense);
   const incomeMonths = useSelector(state => state.transactions.transIncome);
   const currMonth = format(new Date(), 'MMMM yyyy');
 
   // NEED TO COMMENT AND ERASE AFTER =======
-  useEffect(() => {
-    if (isRefreshing) return;
-    dispatch(getIncomeSummary());
-    dispatch(getExpenseSummary());
-  }, [dispatch, isRefreshing]);
+  // useEffect(() => {
+  //   if (isRefreshing) return;
+  //   dispatch(getIncomeSummary());
+  //   dispatch(getExpenseSummary());
+  // }, [dispatch, isRefreshing]);
   //================================
 
   const handleSelect = idx => {
