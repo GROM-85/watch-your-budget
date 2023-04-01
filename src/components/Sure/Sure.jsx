@@ -6,7 +6,7 @@ import css from './Sure.module.css';
 export default function Sure({ onClick, handleConfirm, handleCancel }) {
   return (
     <div>
-      <Modal>
+      <Modal onClose={onClick}>
         <CloseIcon className={css.icon} onClick={onClick} />
         <div className={css.dialog}>
           <p className={css.text}>Are you sure?</p>

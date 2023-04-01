@@ -6,16 +6,31 @@ import {
 } from 'redux/transactions/trans-operations';
 import { deleteByClick } from 'redux/transactions/trans-slice';
 import Sure from 'components/Sure/Sure';
-import { ReactComponent as RecycleBin } from '../../images/recycleBin.svg';
 import { DelBtn } from './DeleteBtn.styled';
 import { useState, useEffect } from 'react';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import useScrollBlock from 'hooks/useScrollBlock';
+
+const deleteBtnSx = {
+  fill:'#787a82',
+  "&:hover": {
+    fill: '#ed3140',
+    transform:'scale(1.1)'
+  },
+
+}
+
 export default function DeleteBtn(id) {
   const [modal, setModal] = useState(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   useEffect(() => {
     if (modal) {
       window.addEventListener('keydown', handleKeyDown);
       document.addEventListener('click', handleClickOutside);
+      blockScroll();
+    }else{
+      allowScroll();
     }
 
     return () => {
@@ -68,7 +83,7 @@ export default function DeleteBtn(id) {
   return (
     <>
       <DelBtn type="button" onClick={handleClick}>
-        <RecycleBin />
+        <DeleteForeverIcon sx={deleteBtnSx}/>
       </DelBtn>
       {modal && (
         <Sure

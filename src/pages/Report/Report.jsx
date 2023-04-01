@@ -144,7 +144,7 @@ export default function Reports() {
       labels: result.map(row => row.subCategory),
       datasets: [
         {
-          label: transSwitch,
+          label: category || transSwitch,
           data: result.map(row => row.amount),
           backgroundColor: result.map((_, idx) =>
             idx % 1 === 0 && idx % 4 === 0 ? '#FF751D' : '#FED9BF'
@@ -153,7 +153,10 @@ export default function Reports() {
           barPercentage: 0.5,
         },
       ],
-    });
+     
+    }
+    
+    );
   };
 
   const setChartToDefault = () => {

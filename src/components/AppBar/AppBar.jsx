@@ -10,8 +10,11 @@ import { ReactComponent as Divider } from '../../images/divider.svg';
 import Quit from 'components/Quit/Quit';
 import { Link } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import useScrollBlock from 'hooks/useScrollBlock';
+
 export const AppBar = () => {
   const [showModal, setShowModal] = useState(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
   const { isLoggedIn, user } = useAuth();
   const dispatch = useDispatch();
 
@@ -21,8 +24,11 @@ export const AppBar = () => {
   useEffect(() => {
     if (showModal) {
       window.addEventListener('keydown', handleKeyDown);
+      blockScroll();
+    }else{
+      allowScroll();
     }
-
+    
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
@@ -40,10 +46,12 @@ export const AppBar = () => {
 
   const closeModal = () => {
     setShowModal(false);
+    
   };
 
   const handleClick = () => {
     setShowModal(true);
+    
   };
 
   const handleLogOut = () => {

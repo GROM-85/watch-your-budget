@@ -70,8 +70,8 @@ export default function OperationsTable() {
       return;
     }
     dispatch(getExpenseSummary());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isRefreshing]);
+    
+  }, [isRefreshing,dispatch]);
 
   // Вариант сделать пустые строки
   const [emptyRowCount, setEmptyRowCount] = useState(0);

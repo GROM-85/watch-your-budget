@@ -20,6 +20,7 @@ export const CurrPeriodSwitch = ({ setChartToDefault = () => null }) => {
   const { isRefreshing } = useAuth();
   const expensesMonths = useSelector(state => state.transactions.transExpense);
   const incomeMonths = useSelector(state => state.transactions.transIncome);
+  const currMonth = format(new Date(), 'MMMM yyyy');
 
   // NEED TO COMMENT AND ERASE AFTER =======
   useEffect(() => {
@@ -36,7 +37,13 @@ export const CurrPeriodSwitch = ({ setChartToDefault = () => null }) => {
   if (!expensesMonths || !incomeMonths) return null;
   const monthListExpense = createMonthList(expensesMonths);
   const monthListIncome = createMonthList(incomeMonths);
-  const allMonths = [...monthListExpense, ...monthListIncome];
+  const allMonths = Array.from(
+    new Set(
+      [currMonth, ...monthListExpense, ...monthListIncome].sort(
+        (objA, objB) => Number(objB.date) - Number(objA.date)
+      )
+    )
+  );
 
   function createMonthList(summary) {
     return Array.from(

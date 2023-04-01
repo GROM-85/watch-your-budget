@@ -88,7 +88,7 @@ const BarChart = ({ chartData }) => {
     plugins: {
       datalabels: {
         anchor: 'end',
-        align: width >= 480 ? 'top' : 'top',
+        align: 'top',
         rotation: width >= 480 ? -15 : 0,
         padding: {
           left: 0,
@@ -103,9 +103,7 @@ const BarChart = ({ chartData }) => {
         },
       },
 
-      legend: {
-        display: false,
-      },
+      
     },
   };
   return (

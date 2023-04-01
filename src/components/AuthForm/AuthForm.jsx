@@ -52,7 +52,7 @@ export const AuthForm = () => {
                 required: 'This is a required field',
                 pattern: {
                   value:
-                    /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{1,6}$/,
+                    /^([a-zA-Z0-9_-]+\.)*[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*\.[a-zA-Z]{1,6}$/,
                   message: 'Please enter valid email!',
                 },
               })}

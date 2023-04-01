@@ -13,7 +13,7 @@ import './index.css';
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="kapusta-project">
+      <BrowserRouter basename="watch-your-budget">
         <App />
       </BrowserRouter>
     </PersistGate>
