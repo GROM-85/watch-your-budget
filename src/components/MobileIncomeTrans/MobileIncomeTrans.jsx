@@ -1,5 +1,6 @@
 import DeleteBtn from 'components/DeleteBtn/DeleteBtn';
 import { useAuth } from 'hooks';
+import { CriptoPortfolio } from 'images/images';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -38,6 +39,7 @@ export default function MobileIncomeTrans() {
   }
 
   return (
+    <>{allIncomeTrans.length < 1 ? <CriptoPortfolio style={{marginTop:'200px'}}/> :
     <List>
       {allIncomeTrans.map(({ _id, amount, category, description, date }) => {
         const formattedAmount = amount.toLocaleString('ru-RU', {
@@ -62,6 +64,7 @@ export default function MobileIncomeTrans() {
           </div>
         );
       })}
-    </List>
+    </List>}
+    </>
   );
 }

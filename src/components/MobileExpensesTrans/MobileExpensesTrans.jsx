@@ -17,6 +17,7 @@ import {
   List,
   Wrapper,
 } from './MobileExpensesTrans.styled';
+import { CriptoPortfolio } from 'images/images';
 
 export default function MobileExpensesTrans() {
   const allExpensesTrans = useSelector(getExpensesTrans);
@@ -38,11 +39,11 @@ export default function MobileExpensesTrans() {
   }
 
   return (
-    <List>
+    <>{allExpensesTrans.length < 1 ? <CriptoPortfolio style={{marginTop:'200px'}}/> : <List>
       {allExpensesTrans.map(({ _id, amount, category, description, date }) => {
         const formattedAmount = amount.toLocaleString('ru-RU', {
           style: 'decimal',
-          minimumFractionDigits: 2,
+          minimumFractionDigits: 2
         });
         return (
           <div key={_id}>
@@ -61,6 +62,6 @@ export default function MobileExpensesTrans() {
           </div>
         );
       })}
-    </List>
+    </List>}</>
   );
 }

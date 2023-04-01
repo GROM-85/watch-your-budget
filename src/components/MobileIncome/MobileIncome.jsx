@@ -75,7 +75,7 @@ const MobileIncome = ({ value }) => {
       .unwrap()
       .then(() => dispatch(getIncomeSummary()));
     resetForm();
-    // return;
+    
   };
 
   const handleChange = ({ target: { name, value } }) => {
@@ -109,9 +109,6 @@ const MobileIncome = ({ value }) => {
       resetForm();
     }
   }, [value]);
-  // useEffect(() => {
-  //    dispatch
-  //   }, []);
 
   return (
     <FormWrapper autoComplete="off" onSubmit={handleSubmit}>
@@ -181,11 +178,9 @@ const MobileIncome = ({ value }) => {
           <CountWrapper>
             <CountInput
               onChange={handleChange}
-              type="number"
+              type="text"
               name="amount"
-              placeholder="00.00"
-              min="0.01"
-              step="0.01"
+              placeholder="0.00"
               value={amount}
             />
             <Calculator

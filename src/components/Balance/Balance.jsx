@@ -13,8 +13,9 @@ import { updateUserBalance } from 'redux/balance/balanceOperations';
 import BalanceModal from './BalanceModal';
 import { selectBalance } from 'redux/auth/auth-selectors';
 import { useAuth } from 'hooks';
+
 export const Balance = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState();
   const currentBalance = useSelector(selectBalance);
   const [promptClose, setPromptClose] = useState(true);
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export const Balance = () => {
   };
 
   useEffect(() => {
+    if(currentBalance === 0)return;
     setValue(currentBalance?.toFixed(2) || '');
   }, [currentBalance]);
  
@@ -62,6 +64,7 @@ export const Balance = () => {
               pattern="[0-9, .UAH]*"
               value={value}
               onChange={onChange}
+              placeholder='0.00'
             />
             <Label>UAH</Label>
           </InputContainer>

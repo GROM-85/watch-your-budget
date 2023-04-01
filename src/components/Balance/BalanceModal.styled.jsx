@@ -13,6 +13,7 @@ export const Backdrop = styled.div`
 
 export const Modal = styled.div`
   position: absolute;
+  cursor:pointer;
   top: 60px;
   z-index: 15;
   max-width: 280px;
@@ -37,6 +38,7 @@ export const Modal = styled.div`
 `;
 
 export const Title = styled.h2`
+  pointer-events: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.43;
@@ -45,6 +47,7 @@ export const Title = styled.h2`
 `;
 
 export const Text = styled.p`
+pointer-events: none;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;

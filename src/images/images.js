@@ -24,6 +24,7 @@ import { ReactComponent as ArrowNext } from './arrowNext.svg';
 import { ReactComponent as ArrowPrev } from './arrowPrev.svg';
 import { ReactComponent as ArrowBack } from './arrowBack.svg';
 import { ReactComponent as FinanceAmico } from './finance-amico.svg';
+import { ReactComponent as CriptoPortfolio } from './crypto-portfolio.svg';
 import cabbageColored from './cabbageColored.svg';
 
 export {
@@ -54,4 +55,5 @@ export {
   ArrowBack,
   cabbageColored,
   FinanceAmico,
+  CriptoPortfolio
 };

@@ -66,7 +66,7 @@ const MobileInput = ({ value }) => {
       description: description,
       date: date,
       category: category,
-      amount: amount,
+      amount: Number(amount),
     };
 
     dispatch(addExpense(userEnteredData))
@@ -74,7 +74,7 @@ const MobileInput = ({ value }) => {
       .then(() => dispatch(getExpenseSummary()));
 
     resetForm();
-    // return;
+   
   };
 
   const handleChange = ({ target: { name, value } }) => {

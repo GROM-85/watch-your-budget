@@ -76,7 +76,7 @@ const InputArea = ({ value }) => {
       .then(() => dispatch(getExpenseSummary()));
 
     resetForm();
-    // return;
+    
   };
 
   const handleChange = ({ target: { name, value } }) => {
@@ -179,11 +179,10 @@ const InputArea = ({ value }) => {
           <CountWrapper>
             <CountInput
               onChange={handleChange}
-              type="number"
+              type="text"
               name="amount"
-              placeholder="00.00"
-              min="0.01"
-              step="0.01"
+              placeholder="0.00"
+              
               value={amount}
             />
             <Calculator

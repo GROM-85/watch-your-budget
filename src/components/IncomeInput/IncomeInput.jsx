@@ -181,9 +181,7 @@ const IncomeInput = ({ value }) => {
               onChange={handleChange}
               type="number"
               name="amount"
-              placeholder="00.00"
-              min="0.01"
-              step="0.01"
+              placeholder="0.00"
               value={amount}
             />
             <Calculator
