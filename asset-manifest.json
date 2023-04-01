@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/watch-your-budget/static/css/main.4a33fd30.css",
-    "main.js": "/watch-your-budget/static/js/main.8e5a03ad.js",
+    "main.js": "/watch-your-budget/static/js/main.b2f82f08.js",
     "static/js/310.c6c6caa7.chunk.js": "/watch-your-budget/static/js/310.c6c6caa7.chunk.js",
     "static/css/632.3011c3aa.chunk.css": "/watch-your-budget/static/css/632.3011c3aa.chunk.css",
     "static/js/632.4bd37985.chunk.js": "/watch-your-budget/static/js/632.4bd37985.chunk.js",
     "static/css/467.866a1797.chunk.css": "/watch-your-budget/static/css/467.866a1797.chunk.css",
-    "static/js/467.b6630670.chunk.js": "/watch-your-budget/static/js/467.b6630670.chunk.js",
+    "static/js/467.d9a8890c.chunk.js": "/watch-your-budget/static/js/467.d9a8890c.chunk.js",
     "static/css/86.3011c3aa.chunk.css": "/watch-your-budget/static/css/86.3011c3aa.chunk.css",
     "static/js/86.0bc12597.chunk.js": "/watch-your-budget/static/js/86.0bc12597.chunk.js",
     "static/js/972.aee9aa6d.chunk.js": "/watch-your-budget/static/js/972.aee9aa6d.chunk.js",
@@ -53,12 +53,12 @@
     "static/media/arrowPrev.svg": "/watch-your-budget/static/media/arrowPrev.f7354aa490b21dedd1c89e9b094586f4.svg",
     "static/media/divider.svg": "/watch-your-budget/static/media/divider.5c473292d428032de81e54d6d2bc28e5.svg",
     "main.4a33fd30.css.map": "/watch-your-budget/static/css/main.4a33fd30.css.map",
-    "main.8e5a03ad.js.map": "/watch-your-budget/static/js/main.8e5a03ad.js.map",
+    "main.b2f82f08.js.map": "/watch-your-budget/static/js/main.b2f82f08.js.map",
     "310.c6c6caa7.chunk.js.map": "/watch-your-budget/static/js/310.c6c6caa7.chunk.js.map",
     "632.3011c3aa.chunk.css.map": "/watch-your-budget/static/css/632.3011c3aa.chunk.css.map",
     "632.4bd37985.chunk.js.map": "/watch-your-budget/static/js/632.4bd37985.chunk.js.map",
     "467.866a1797.chunk.css.map": "/watch-your-budget/static/css/467.866a1797.chunk.css.map",
-    "467.b6630670.chunk.js.map": "/watch-your-budget/static/js/467.b6630670.chunk.js.map",
+    "467.d9a8890c.chunk.js.map": "/watch-your-budget/static/js/467.d9a8890c.chunk.js.map",
     "86.3011c3aa.chunk.css.map": "/watch-your-budget/static/css/86.3011c3aa.chunk.css.map",
     "86.0bc12597.chunk.js.map": "/watch-your-budget/static/js/86.0bc12597.chunk.js.map",
     "972.aee9aa6d.chunk.js.map": "/watch-your-budget/static/js/972.aee9aa6d.chunk.js.map",
@@ -74,6 +74,6 @@
   },
   "entrypoints": [
     "static/css/main.4a33fd30.css",
-    "static/js/main.8e5a03ad.js"
+    "static/js/main.b2f82f08.js"
   ]
 }
