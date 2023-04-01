@@ -11,12 +11,14 @@ import { App } from 'components/App';
 import './index.css';
 
 ReactDOM.render(
+  <React.StrictMode>
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter basename="watch-your-budget">
         <App />
       </BrowserRouter>
     </PersistGate>
-  </Provider>,
+  </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
