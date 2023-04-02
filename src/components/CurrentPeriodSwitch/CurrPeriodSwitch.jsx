@@ -73,7 +73,6 @@ export const CurrPeriodSwitch = ({ setChartToDefault = () => null }) => {
           const divEl = document.querySelector('.js-period');
           const value = divEl.querySelector('.active.carousel-item').firstChild
             .textContent;
-
           dispatch(getPeriodData(format(new Date(value), 'yyyy-MM')));
           setChartToDefault();
         }}
