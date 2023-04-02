@@ -110,7 +110,7 @@ export const getPeriodData = createAsyncThunk(
       });
       return result.data;
     } catch (error) {
-      Notiflix.Notify.failure('Something went wrong, please try again later');
+      Notiflix.Notify.failure('Issue with date format!');
       return rejectWithValue(error.response.data);
     }
   }

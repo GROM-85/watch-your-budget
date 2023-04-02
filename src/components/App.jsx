@@ -9,7 +9,6 @@ import { RestrictedRoute } from 'routes/RestrictedRoute';
 import Layout from 'pages/Layout/Layout';
 import SwitchProvider from 'contexts/SwitchProvider.js';
 import { NotFound } from 'pages/NotFound/NotFound.jsx';
-import { getExpenseSummary, getIncomeSummary } from 'redux/transactions/trans-operations.js';
 const AuthPage = lazy(() => import('../pages/AuthPage/AuthPage.jsx'));
 const Operations = lazy(() => import('../pages/Operations/Operations'));
 const Report = lazy(() => import('../pages/Report/Report'));
@@ -24,13 +23,6 @@ const MobileIncomePage = lazy(() =>
 export const App = () => {
   const dispatch = useDispatch();
   const { isLoggedIn } = useAuth();
-  const { isRefreshing } = useAuth();
-  
-  useEffect(() => {
-    if (isRefreshing) return;
-    dispatch(getIncomeSummary());
-    dispatch(getExpenseSummary());
-  }, [dispatch, isRefreshing]);
 
   useEffect(() => {
     if (!isLoggedIn) return;

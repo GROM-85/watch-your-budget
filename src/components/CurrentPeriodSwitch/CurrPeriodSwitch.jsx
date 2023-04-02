@@ -1,14 +1,14 @@
 import { Typography } from '@mui/material';
 import { StyledCarouselDiv } from 'components/CarouselItem/CarouselItem.styled';
 import { StyledTitle } from './CurrPeriodSwitch.styled';
-import { format } from 'date-fns';
-// import { useAuth } from 'hooks';
-import { useState } from 'react';
+import { format} from 'date-fns';
+import { useAuth } from 'hooks';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import {
-//   getExpenseSummary,
-//   getIncomeSummary,
-// } from 'redux/transactions/trans-operations';
+import {
+  getExpenseSummary,
+  getIncomeSummary,
+} from 'redux/transactions/trans-operations';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { ArrowNext, ArrowPrev } from 'images/images';
@@ -17,17 +17,17 @@ import { getPeriodData } from 'redux/transactions/trans-operations';
 export const CurrPeriodSwitch = ({ setChartToDefault = () => null }) => {
   const [idx, setIdx] = useState(0);
   const dispatch = useDispatch();
-  // const { isRefreshing } = useAuth();
+  const { isRefreshing } = useAuth();
   const expensesMonths = useSelector(state => state.transactions.transExpense);
   const incomeMonths = useSelector(state => state.transactions.transIncome);
   const currMonth = format(new Date(), 'MMMM yyyy');
 
   // NEED TO COMMENT AND ERASE AFTER =======
-  // useEffect(() => {
-  //   if (isRefreshing) return;
-  //   dispatch(getIncomeSummary());
-  //   dispatch(getExpenseSummary());
-  // }, [dispatch, isRefreshing]);
+  useEffect(() => {
+    if (isRefreshing) return;
+    dispatch(getIncomeSummary());
+    dispatch(getExpenseSummary());
+  }, [dispatch, isRefreshing]);
   //================================
 
   const handleSelect = idx => {
